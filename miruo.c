@@ -31,7 +31,7 @@ void usage()
   printf("   -C, --color=[0|1]              # color 0=off 1=on\n");
   printf("   -L, --session-limit=NUM        # active session limit. Default 1024\n");
   printf("   -l, --segment-limit=NUM        # active segment limit. Default 65536\n");
-  printf("   -m, --dpi-mode=mode            # deep packet inspection mode. (now support only http)\n");
+  printf("   -m, --dpi-mode=mode            # deep packet inspection mode. (now support http/memcached)\n");
   printf("   -q, --qiute                    # \n");
   printf("       --all                      # all session lookup\n");
   printf("       --live                     # live mode(all segment lookup)\n");
@@ -2091,6 +2091,7 @@ void miruo_execute()
   switch(opt.mode){
     case MIRUO_MODE_TCP:
     case MIRUO_MODE_HTTP:
+    case MIRUO_MODE_MEMCACHED:
       miruo_execute_tcpsession();
       break;
     default:

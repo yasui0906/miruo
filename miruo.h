@@ -34,9 +34,10 @@
 #define COLOR_WHITE   7
 
 /***** MIRUO MODE *****/
-#define MIRUO_MODE_TCP   1
-#define MIRUO_MODE_HTTP  2
-#define MIRUO_MODE_MYSQL 3
+#define MIRUO_MODE_TCP       1
+#define MIRUO_MODE_HTTP      2
+#define MIRUO_MODE_MYSQL     3
+#define MIRUO_MODE_MEMCACHED 4
 
 /***** TCP STATUS *****/
 #define MIRUO_STATE_TCP_LISTEN     1
